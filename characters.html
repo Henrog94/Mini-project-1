@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Characters | SF Training Hub</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            SF TRAINING HUB
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="characters.html">
+                    Characters
+                </a>
+            </li>
+
+            <li>
+                <a href="guides.html">
+                    Guides
+                </a>
+            </li>
+
+            <li>
+                <a href="training.html">
+                    Training
+                </a>
+            </li>
+<li>
+    <a href="frame-data.html">
+        Frame Data
+    </a>
+    <li>
+    <a href="external.html">
+        Resources
+    </a>
+</li>
+</li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Character Section -->
+
+    <main class="section">
+
+        <div class="section-title">
+
+            <h2>
+                Choose Your Fighter
+            </h2>
+
+            <p>
+                Explore fighters and learn
+                what makes them unique.
+            </p>
+
+        </div>
+
+
+      <!-- Character Search -->
+
+<section class="character-controls">
+
+    <div class="character-search">
+
+        <label for="character-search">
+            Search Fighters
+        </label>
+
+        <input
+            type="text"
+            id="character-search"
+            placeholder="Search by character name..."
+        >
+
+    </div>
+
+
+    <div class="character-filter">
+
+        <label for="difficulty-filter">
+            Difficulty
+        </label>
+
+        <select id="difficulty-filter">
+
+            <option value="all">
+                All Fighters
+            </option>
+
+            <option value="Beginner">
+                Beginner
+            </option>
+
+            <option value="Intermediate">
+                Intermediate
+            </option>
+
+            <option value="Advanced">
+                Advanced
+            </option>
+
+        </select>
+
+    </div>
+
+</section>
+
+
+<!-- JavaScript will put characters here -->
+
+<div
+    id="character-container"
+    class="card-grid"
+>
+
+</div>
+
+
+<!-- Character Details Modal -->
+
+<div
+    id="character-modal"
+    class="character-modal"
+>
+
+    <div
+        id="character-modal-content"
+        class="modal-content"
+    >
+
+    </div>
+
+</div>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Street Fighter Training Hub
+        </p>
+
+    </footer>
+
+
+    <script src="js/api.js"></script>
+
+<script src="js/characters.js"></script>
+
+</body>
+
+</html>

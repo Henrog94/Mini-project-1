@@ -1,0 +1,143 @@
+[
+    {
+        "id": 1,
+        "name": "Ryu",
+        "image": "assets/images/ryu.png.png",
+        "style": "Ansatsuken",
+        "difficulty": "Beginner",
+        "role": "Fundamentals",
+        "description": "A balanced fighter focused on fundamentals, neutral control, projectiles, and anti-air attacks.",
+        "strengths": [
+            "Neutral",
+            "Fireballs",
+            "Anti-airs"
+        ],
+        "weaknesses": [
+            "Limited mobility",
+            "Requires strong fundamentals"
+        ],
+        "specialMoves": [
+            "Hadoken",
+            "Shoryuken",
+            "Tatsumaki Senpu-Kyaku"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Ken",
+        "style": "Ansatsuken",
+        "image": "assets/images/ken.png.png",
+        "difficulty": "Intermediate",
+        "role": "Rushdown",
+        "description": "An aggressive fighter who uses speed, pressure, and offensive momentum.",
+        "strengths": [
+            "Rushdown",
+            "Pressure",
+            "Corner offense"
+        ],
+        "weaknesses": [
+            "Risky offense",
+            "Requires good spacing"
+        ],
+        "specialMoves": [
+            "Hadoken",
+            "Shoryuken",
+            "Tatsumaki Senpu-Kyaku"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Chun-Li",
+        "image": "assets/images/chun-li.png.png",
+        "style": "Kung Fu",
+        "difficulty": "Intermediate",
+        "role": "Neutral",
+        "description": "A mobile fighter who uses long-reaching attacks and powerful kicks.",
+        "strengths": [
+            "Mobility",
+            "Neutral",
+            "Long-range normals"
+        ],
+        "weaknesses": [
+            "Execution",
+            "Complex techniques"
+        ],
+        "specialMoves": [
+            "Kikoken",
+            "Spinning Bird Kick",
+            "Lightning Kicks"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Guile",
+        "image": "assets/images/guile.png.png",
+        "style": "Military",
+        "difficulty": "Intermediate",
+        "role": "Zoning",
+        "description": "A defensive specialist who controls space with projectiles and strong anti-air attacks.",
+        "strengths": [
+            "Zoning",
+            "Defense",
+            "Space control"
+        ],
+        "weaknesses": [
+            "Close-range pressure",
+            "Charge management"
+        ],
+        "specialMoves": [
+            "Sonic Boom",
+            "Flash Kick"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Zangief",
+        "image": "assets/images/zangief.png.png",
+        "style": "Wrestling",
+
+        "difficulty": "Advanced",
+        "role": "Grappler",
+        "description": "A powerful grappler specializing in command grabs and close-range damage.",
+        "strengths": [
+            "Command grabs",
+            "Damage",
+            "Close-range pressure"
+        ],
+        "weaknesses": [
+            "Mobility",
+            "Long-range zoning"
+        ],
+        "specialMoves": [
+            "Spinning Piledriver",
+            "Double Lariat"
+        ]
+    },
+     {
+    "id": 6,
+    "name": "Juri",
+    "image": "assets/images/juri.png.png",
+    "style": "Taekwondo",
+    "difficulty": "Advanced",
+    "role": "Rushdown",
+    "description": "Juri is a highly mobile fighter who uses her Fuha system and unpredictable movement to pressure opponents and control the pace of a match.",
+    "strengths": [
+        "Strong pressure",
+        "Excellent mobility",
+        "Flexible Fuha stock system",
+        "Strong mix-up potential"
+    ],
+    "weaknesses": [
+        "Requires resource management",
+        "Can be difficult for beginners",
+        "Some attacks require careful spacing",
+        "Pressure can become predictable if overused"
+    ],
+    "specialMoves": [
+        "Fuhajin",
+        "Saihasho",
+        "Ankensatsu",
+        "Go Ohsatsu"
+    ]
+}
+]

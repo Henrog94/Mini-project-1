@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Frame Data | SF Training Hub
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================
+         NAVIGATION
+    ================================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            SF TRAINING HUB
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+
+            <li>
+                <a href="characters.html">
+                    Characters
+                </a>
+            </li>
+
+
+            <li>
+                <a href="guides.html">
+                    Guides
+                </a>
+            </li>
+
+
+            <li>
+                <a href="training.html">
+                    Training
+                </a>
+            </li>
+
+
+            <li>
+                <a href="frame-data.html">
+                    Frame Data
+                </a>
+                <li>
+    <a href="external.html">
+        Resources
+    </a>
+</li>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================================
+         MAIN CONTENT
+    ================================= -->
+
+    <main class="section">
+
+
+        <!-- ================================
+             PAGE TITLE
+        ================================= -->
+
+        <div class="section-title">
+
+            <h1>
+                Frame Data Lab
+            </h1>
+
+
+            <p>
+                Explore move properties and
+                understand frame advantage.
+            </p>
+
+        </div>
+
+
+        <!-- ================================
+             CHARACTER AND MOVE CONTROLS
+        ================================= -->
+
+        <section class="frame-controls">
+
+
+            <!-- Fighter -->
+
+            <div class="frame-control">
+
+                <label for="frame-character">
+
+                    Fighter
+
+                </label>
+
+
+                <select id="frame-character">
+
+                    <option value="">
+                        Select Fighter
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Move -->
+
+            <div class="frame-control">
+
+                <label for="frame-move">
+
+                    Move
+
+                </label>
+
+
+                <select id="frame-move">
+
+                    <option value="">
+                        Select Move
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================================
+             FRAME DATA RESULT
+        ================================= -->
+
+        <section
+            id="frame-result"
+            class="frame-result hidden"
+        >
+
+
+            <!-- Move Title -->
+
+            <h2 id="frame-move-name">
+
+                Move
+
+            </h2>
+
+
+            <p id="frame-move-type">
+
+                Normal
+
+            </p>
+
+
+            <!-- ================================
+                 FRAME STATISTICS
+            ================================= -->
+
+            <div class="frame-stat-grid">
+
+
+                <!-- Startup -->
+
+                <div class="frame-stat">
+
+                    <span>
+                        Startup
+                    </span>
+
+
+                    <strong
+                        id="startup-value"
+                    >
+                        -
+                    </strong>
+
+                </div>
+
+
+                <!-- Active -->
+
+                <div class="frame-stat">
+
+                    <span>
+                        Active
+                    </span>
+
+
+                    <strong
+                        id="active-value"
+                    >
+                        -
+                    </strong>
+
+                </div>
+
+
+                <!-- Recovery -->
+
+                <div class="frame-stat">
+
+                    <span>
+                        Recovery
+                    </span>
+
+
+                    <strong
+                        id="recovery-value"
+                    >
+                        -
+                    </strong>
+
+                </div>
+
+
+                <!-- On Hit -->
+
+                <div class="frame-stat">
+
+                    <span>
+                        On Hit
+                    </span>
+
+
+                    <strong
+                        id="hit-value"
+                    >
+                        -
+                    </strong>
+
+                </div>
+
+
+                <!-- On Block -->
+
+                <div class="frame-stat">
+
+                    <span>
+                        On Block
+                    </span>
+
+
+                    <strong
+                        id="block-value"
+                    >
+                        -
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ================================
+                 VISUAL BAR CHART
+            ================================= -->
+
+            <div class="frame-chart-section">
+
+                <h2>
+                    Frame Visualization
+                </h2>
+
+
+                <div class="frame-bars">
+
+
+                    <!-- Startup Bar -->
+
+                    <div class="frame-bar-row">
+
+                        <span>
+                            Startup
+                        </span>
+
+
+                        <div class="frame-bar">
+
+                            <div
+                                id="startup-bar"
+                                class="frame-bar-fill"
+                            >
+
+                            </div>
+
+                        </div>
+
+
+                        <strong
+                            id="startup-chart-value"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <!-- Active Bar -->
+
+                    <div class="frame-bar-row">
+
+                        <span>
+                            Active
+                        </span>
+
+
+                        <div class="frame-bar">
+
+                            <div
+                                id="active-bar"
+                                class="frame-bar-fill"
+                            >
+
+                            </div>
+
+                        </div>
+
+
+                        <strong
+                            id="active-chart-value"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <!-- Recovery Bar -->
+
+                    <div class="frame-bar-row">
+
+                        <span>
+                            Recovery
+                        </span>
+
+
+                        <div class="frame-bar">
+
+                            <div
+                                id="recovery-bar"
+                                class="frame-bar-fill"
+                            >
+
+                            </div>
+
+                        </div>
+
+
+                        <strong
+                            id="recovery-chart-value"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================
+                 FRAME TIMELINE
+            ================================= -->
+
+            <section
+                class="frame-timeline-section"
+            >
+
+                <h2>
+                    Frame Timeline
+                </h2>
+
+
+                <p class="timeline-description">
+
+                    A visual representation of the
+                    move's startup, active, and
+                    recovery frames.
+
+                </p>
+
+
+                <!-- Timeline -->
+
+                <div class="timeline">
+
+
+                    <!-- Timeline Scale -->
+
+                    <div class="timeline-scale">
+
+                        <span>
+                            0
+                        </span>
+
+                        <span>
+                            5
+                        </span>
+
+                        <span>
+                            10
+                        </span>
+
+                        <span>
+                            15
+                        </span>
+
+                        <span>
+                            20
+                        </span>
+
+                    </div>
+
+
+                    <!-- Startup -->
+
+                    <div class="timeline-row">
+
+                        <span class="timeline-label">
+
+                            Startup
+
+                        </span>
+
+
+                        <div class="timeline-track">
+
+                            <div
+                                id="timeline-startup"
+                                class="timeline-segment startup-segment"
+                            >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Active -->
+
+                    <div class="timeline-row">
+
+                        <span class="timeline-label">
+
+                            Active
+
+                        </span>
+
+
+                        <div class="timeline-track">
+
+                            <div
+                                id="timeline-active"
+                                class="timeline-segment active-segment"
+                            >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Recovery -->
+
+                    <div class="timeline-row">
+
+                        <span class="timeline-label">
+
+                            Recovery
+
+                        </span>
+
+
+                        <div class="timeline-track">
+
+                            <div
+                                id="timeline-recovery"
+                                class="timeline-segment recovery-segment"
+                            >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- ================================
+                 FRAME DATA EXPLANATION
+            ================================= -->
+
+            <section class="frame-explanation">
+
+                <h2>
+                    Understanding Frame Data
+                </h2>
+
+
+                <p>
+                    Frame data describes how long
+                    different parts of an attack take
+                    to happen. Understanding these
+                    values can help players determine
+                    when they can attack, defend, or
+                    punish an opponent.
+                </p>
+
+
+                <div class="explanation-grid">
+
+
+                    <!-- Startup -->
+
+                    <article class="explanation-card">
+
+                        <h3>
+                            Startup
+                        </h3>
+
+
+                        <p>
+
+                            The number of frames before
+                            the attack becomes active.
+
+                            Lower startup values
+                            generally mean the attack
+                            comes out faster.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- Active -->
+
+                    <article class="explanation-card">
+
+                        <h3>
+                            Active
+                        </h3>
+
+
+                        <p>
+
+                            The frames during which the
+                            attack's hitbox is active.
+
+                            These are the frames where
+                            the attack can connect with
+                            an opponent.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- Recovery -->
+
+                    <article class="explanation-card">
+
+                        <h3>
+                            Recovery
+                        </h3>
+
+
+                        <p>
+
+                            The frames after the active
+                            portion where the character
+                            returns toward a neutral
+                            state.
+
+                            Longer recovery generally
+                            gives the opponent more time
+                            to respond.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- On Hit -->
+
+                    <article class="explanation-card">
+
+                        <h3>
+                            On Hit
+                        </h3>
+
+
+                        <p>
+
+                            The frame advantage or
+                            disadvantage when the attack
+                            successfully hits the
+                            opponent.
+
+                            Positive values generally
+                            mean the attacker recovers
+                            first.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- On Block -->
+
+                    <article class="explanation-card">
+
+                        <h3>
+                            On Block
+                        </h3>
+
+
+                        <p>
+
+                            The frame advantage or
+                            disadvantage after the
+                            opponent blocks the attack.
+
+                            Negative values can mean
+                            the attacker recovers later.
+
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer>
+
+        <p>
+            Street Fighter Training Hub
+        </p>
+
+    </footer>
+
+
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+
+    <script src="js/api.js"></script>
+
+    <script src="js/frame-data.js"></script>
+
+
+</body>
+
+</html>

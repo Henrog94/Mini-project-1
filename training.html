@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Training | SF Training Hub
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================
+         NAVIGATION
+    ================================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            SF TRAINING HUB
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+
+            <li>
+                <a href="characters.html">
+                    Characters
+                </a>
+            </li>
+
+
+            <li>
+                <a href="guides.html">
+                    Guides
+                </a>
+            </li>
+
+
+            <li>
+                <a href="training.html">
+                    Training
+                </a>
+            </li>
+            <li>
+    <a href="frame-data.html">
+        Frame Data
+    </a>
+    <li>
+    <a href="external.html">
+        Resources
+    </a>
+</li>
+</li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================================
+         MAIN CONTENT
+    ================================= -->
+
+    <main class="section">
+
+
+        <div class="section-title">
+
+            <h1>
+                Training Mode
+            </h1>
+
+
+            <p>
+                Build a custom practice session
+                and work on your fundamentals.
+            </p>
+
+        </div>
+
+
+        <!-- ================================
+             TRAINING SETUP
+        ================================= -->
+
+        <section
+            id="training-setup"
+            class="training-panel"
+        >
+
+            <h2>
+                Create Training Session
+            </h2>
+
+
+            <form id="training-form">
+
+
+                <!-- Character -->
+
+                <div class="form-group">
+
+                    <label for="training-character">
+
+                        Fighter
+
+                    </label>
+
+
+                    <select
+                        id="training-character"
+                        required
+                    >
+
+                        <option value="">
+                            Select a fighter
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Category -->
+
+                <div class="form-group">
+
+                    <label for="training-category">
+
+                        Training Focus
+
+                    </label>
+
+
+                    <select
+                        id="training-category"
+                        required
+                    >
+
+                        <option value="">
+                            Select a focus
+                        </option>
+
+
+                        <option value="Neutral">
+                            Neutral
+                        </option>
+
+
+                        <option value="Offense">
+                            Offense
+                        </option>
+
+
+                        <option value="Defense">
+                            Defense
+                        </option>
+
+
+                        <option value="Combos">
+                            Combos
+                        </option>
+
+
+                        <option value="Movement">
+                            Movement
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Difficulty -->
+
+                <div class="form-group">
+
+                    <label for="training-difficulty">
+
+                        Difficulty
+
+                    </label>
+
+
+                    <select
+                        id="training-difficulty"
+                        required
+                    >
+
+                        <option value="">
+                            Select difficulty
+                        </option>
+
+
+                        <option value="Beginner">
+                            Beginner
+                        </option>
+
+
+                        <option value="Intermediate">
+                            Intermediate
+                        </option>
+
+
+                        <option value="Advanced">
+                            Advanced
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Duration -->
+
+                <div class="form-group">
+
+                    <label for="training-duration">
+
+                        Session Length
+
+                    </label>
+
+
+                    <select
+                        id="training-duration"
+                        required
+                    >
+
+                        <option value="5">
+                            5 Minutes
+                        </option>
+
+
+                        <option value="10">
+                            10 Minutes
+                        </option>
+
+
+                        <option value="15">
+                            15 Minutes
+                        </option>
+
+
+                        <option value="30">
+                            30 Minutes
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Goals -->
+
+                <fieldset class="training-goals">
+
+                    <legend>
+                        Training Goals
+                    </legend>
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            name="goal"
+                            value="Practice your anti-air"
+                        >
+
+                        Practice your anti-air
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            name="goal"
+                            value="Practice blocking"
+                        >
+
+                        Practice blocking
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            name="goal"
+                            value="Practice a combo"
+                        >
+
+                        Practice a combo
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            name="goal"
+                            value="Practice movement"
+                        >
+
+                        Practice movement
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            name="goal"
+                            value="Practice a punish"
+                        >
+
+                        Practice a punish
+
+                    </label>
+
+                </fieldset>
+
+
+                <button
+                    type="submit"
+                    class="btn"
+                >
+
+                    START TRAINING
+
+                </button>
+
+
+            </form>
+
+        </section>
+
+
+        <!-- ================================
+             ACTIVE TRAINING SESSION
+        ================================= -->
+
+        <section
+            id="training-session"
+            class="training-panel hidden"
+        >
+
+            <div class="training-session-header">
+
+                <h2>
+                    Training Session
+                </h2>
+
+
+                <button
+                    id="end-session"
+                    class="btn secondary-button"
+                >
+
+                    END SESSION
+
+                </button>
+
+            </div>
+
+
+            <div
+                id="session-summary"
+                class="session-summary"
+            >
+
+            </div>
+
+
+            <!-- Progress -->
+
+            <div class="progress-section">
+
+                <div class="progress-label">
+
+                    <span>
+                        Progress
+                    </span>
+
+
+                    <span id="progress-text">
+                        0%
+                    </span>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progress-fill"
+                    >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Goals -->
+
+            <div
+                id="active-goals"
+                class="active-goals"
+            >
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer>
+
+        <p>
+            Street Fighter Training Hub
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/api.js"></script>
+
+    <script src="js/training.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2059 @@
+/* =========================================
+   STREET FIGHTER TRAINING HUB
+   Main Stylesheet
+========================================= */
+
+/* ---------- GENERAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+.navbar {
+    background-color: #151515;
+    border-bottom: 3px solid #e63946;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e63946;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e63946;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 80vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.8)
+    ),
+    url("assets/images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.btn {
+    display: inline-block;
+    background-color: #e63946;
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff4d5a;
+    transform: scale(1.05);
+}
+
+/* ---------- GENERAL SECTIONS ---------- */
+
+.section {
+    padding: 60px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+/* ---------- CARDS ---------- */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.card {
+    background-color: #1c1c1c;
+
+    border: 1px solid #333;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    border-color: #e63946;
+
+    box-shadow:
+        0 10px 30px rgba(230, 57, 70, 0.25);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #e63946;
+}
+
+/* ---------- CHARACTER CARDS ---------- */
+
+.character-card {
+    overflow: hidden;
+    padding: 0;
+}
+
+.character-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.character-info {
+    padding: 20px;
+}
+
+.character-info h3 {
+    font-size: 1.8rem;
+}
+
+/* ---------- FORMS ---------- */
+
+.training-form {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    background-color: #1c1c1c;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    border: 1px solid #333;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: #111;
+
+    border: 1px solid #555;
+
+    border-radius: 5px;
+
+    color: white;
+}
+
+/* ---------- RADIO / CHECKBOX ---------- */
+
+.checkbox-group,
+.radio-group {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.checkbox-group label,
+.radio-group label {
+    font-weight: normal;
+}
+
+/* ---------- TRAINING RESULT ---------- */
+
+.training-result {
+    max-width: 700px;
+
+    margin: 30px auto 0;
+
+    background-color: #1c1c1c;
+
+    border-left: 5px solid #e63946;
+
+    padding: 25px;
+
+    display: none;
+}
+
+.training-result h3 {
+    color: #e63946;
+
+    margin-bottom: 15px;
+}
+
+.training-result ul {
+    padding-left: 25px;
+}
+
+/* ---------- GUIDE ACCORDION ---------- */
+
+.guide-item {
+    background-color: #1c1c1c;
+
+    margin-bottom: 15px;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.guide-question {
+    width: 100%;
+
+    padding: 20px;
+
+    background-color: #222;
+
+    color: white;
+
+    border: none;
+
+    text-align: left;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.guide-question:hover {
+    background-color: #333;
+}
+
+.guide-answer {
+    display: none;
+
+    padding: 20px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: #151515;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+
+    border-top: 2px solid #e63946;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .section {
+        padding: 40px 5%;
+    }
+}
+/* =========================================
+   CHARACTER CONTROLS
+========================================= */
+
+.character-controls {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.character-search,
+.character-filter {
+
+    flex: 1;
+
+    min-width: 250px;
+
+}
+
+
+.character-search label,
+.character-filter label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+}
+
+
+.character-search input,
+.character-filter select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 2px solid #555;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================
+   CHARACTER CARDS
+========================================= */
+
+.character-card {
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    border: 2px solid #444;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.character-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.3);
+
+}
+
+
+.character-card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+}
+
+
+.character-id {
+
+    font-weight: bold;
+
+}
+
+
+.difficulty {
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.character-role {
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================
+   CHARACTER MODAL
+========================================= */
+
+.character-modal {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        rgba(0, 0, 0, 0.75);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease;
+
+    z-index: 1000;
+
+}
+
+
+.character-modal.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.modal-content {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 700px;
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #111;
+
+    box-sizing: border-box;
+
+}
+
+
+.modal-close {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 15px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+}
+
+
+.modal-content h2 {
+
+    font-size: 36px;
+
+    margin-top: 0;
+
+}
+
+
+.modal-content h3 {
+
+    margin-top: 25px;
+
+}
+
+
+.modal-content li {
+
+    margin-bottom: 8px;
+
+}
+/* =========================================
+   GUIDE CONTROLS
+========================================= */
+
+.guide-controls {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.guide-search,
+.guide-filter {
+
+    flex: 1;
+
+    min-width: 250px;
+
+}
+
+
+.guide-search label,
+.guide-filter label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+}
+
+
+.guide-search input,
+.guide-filter select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 2px solid #555;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================
+   GUIDE CARDS
+========================================= */
+
+.guide-card {
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    border: 2px solid #444;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.guide-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.3);
+
+}
+
+
+.guide-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+    gap: 10px;
+
+}
+
+
+.guide-category,
+.guide-difficulty {
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.guide-card h2 {
+
+    margin-top: 10px;
+
+}
+
+
+.guide-card li {
+
+    margin-bottom: 5px;
+
+}
+/* =========================================
+   TRAINING PAGE
+========================================= */
+
+.training-panel {
+
+    max-width: 800px;
+
+    margin: 0 auto 30px auto;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    border: 2px solid #444;
+
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+}
+
+
+.form-group select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 2px solid #555;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+}
+
+
+/* =========================================
+   TRAINING GOALS
+========================================= */
+
+.training-goals {
+
+    margin: 25px 0;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    border: 2px solid #555;
+
+}
+
+
+.training-goals legend {
+
+    padding: 0 10px;
+
+    font-weight: bold;
+
+}
+
+
+.training-goals label {
+
+    display: block;
+
+    margin: 12px 0;
+
+    cursor: pointer;
+
+}
+
+
+.training-goals input {
+
+    margin-right: 10px;
+
+}
+
+
+/* =========================================
+   SESSION
+========================================= */
+
+.training-session-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.secondary-button {
+
+    background: transparent;
+
+    border: 2px solid currentColor;
+
+}
+
+
+/* =========================================
+   SESSION SUMMARY
+========================================= */
+
+.session-summary {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.summary-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    border: 1px solid #555;
+
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.progress-section {
+
+    margin-bottom: 30px;
+
+}
+
+
+.progress-label {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+}
+
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 20px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #ddd;
+
+}
+
+
+#progress-fill {
+
+    width: 0%;
+
+    height: 100%;
+
+    transition:
+        width 0.4s ease;
+
+}
+
+
+/* =========================================
+   ACTIVE GOALS
+========================================= */
+
+.active-goals {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.training-goal {
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    border: 2px solid #555;
+
+}
+
+
+.training-goal label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+}
+
+
+.training-goal input {
+
+    width: 20px;
+
+    height: 20px;
+
+}
+
+
+/* =========================================
+   HIDDEN
+========================================= */
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .session-summary {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .training-session-header {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+}
+/* =========================================
+   FRAME DATA
+========================================= */
+
+.frame-controls {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    max-width: 900px;
+
+    margin: 0 auto 30px auto;
+
+}
+
+
+.frame-control label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+}
+
+
+.frame-control select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 2px solid #555;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+}
+
+
+/* =========================================
+   FRAME RESULT
+========================================= */
+
+.frame-result {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    border: 2px solid #444;
+
+    border-radius: 12px;
+
+}
+
+
+.frame-result h2 {
+
+    margin-top: 0;
+
+}
+
+
+#frame-move-type {
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+   FRAME STATISTICS
+========================================= */
+
+.frame-stat-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 12px;
+
+    margin: 30px 0;
+
+}
+
+
+.frame-stat {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 20px 10px;
+
+    border: 2px solid #555;
+
+    border-radius: 8px;
+
+}
+
+
+.frame-stat span {
+
+    font-size: 14px;
+
+}
+
+
+.frame-stat strong {
+
+    font-size: 28px;
+
+}
+
+
+/* =========================================
+   FRAME CHART
+========================================= */
+
+.frame-chart-section {
+
+    margin-top: 30px;
+
+}
+
+
+.frame-bars {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.frame-bar-row {
+
+    display: grid;
+
+    grid-template-columns:
+        100px 1fr 50px;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+/* =========================================
+   FRAME DATA BARS
+========================================= */
+
+.frame-bars {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    width: 100%;
+
+}
+
+
+.frame-bar-row {
+
+    display: grid;
+
+    grid-template-columns:
+        100px 1fr 50px;
+
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+}
+
+
+.frame-bar {
+
+    width: 100%;
+
+    height: 25px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #ddd;
+
+}
+
+
+.frame-bar-fill {
+
+    display: block;
+
+    width: 0%;
+
+    height: 100%;
+
+    min-width: 0;
+
+    border-radius: 20px;
+
+    background: #e63946;
+
+    transition: width 0.6s ease-in-out;
+
+}
+
+
+/* =========================================
+   MOBILE FRAME DATA
+========================================= */
+
+@media (max-width: 700px) {
+
+    .frame-controls {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .frame-stat-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .frame-bar-row {
+
+        grid-template-columns:
+            80px 1fr 40px;
+
+    }
+
+}
+/* =========================================
+   FRAME TIMELINE
+========================================= */
+
+.frame-timeline-section {
+
+    margin-top: 40px;
+
+    padding-top: 30px;
+
+    border-top: 2px solid #444;
+
+}
+
+
+.timeline-description {
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================
+   TIMELINE SCALE
+========================================= */
+
+.timeline {
+
+    width: 100%;
+
+}
+
+
+.timeline-scale {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    margin-left: 100px;
+
+    margin-bottom: 10px;
+
+    font-size: 12px;
+
+}
+
+
+.timeline-scale span {
+
+    text-align: center;
+
+}
+
+
+/* =========================================
+   TIMELINE ROW
+========================================= */
+
+.timeline-row {
+
+    display: grid;
+
+    grid-template-columns:
+        100px 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.timeline-label {
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+   TIMELINE TRACK
+========================================= */
+
+.timeline-track {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 30px;
+
+    overflow: hidden;
+
+    border-radius: 6px;
+
+    background:
+        repeating-linear-gradient(
+            to right,
+            transparent,
+            transparent calc(25% - 1px),
+            #888 calc(25% - 1px),
+            #888 25%
+        );
+
+    border: 1px solid #555;
+
+}
+
+
+/* =========================================
+   TIMELINE SEGMENTS
+========================================= */
+
+.timeline-segment {
+
+    position: absolute;
+
+    top: 0;
+
+    height: 100%;
+
+    width: 0%;
+
+    transition:
+        width 0.6s ease,
+        left 0.6s ease;
+
+}
+
+
+/* =========================================
+   TIMELINE COLORS
+========================================= */
+
+.startup-segment {
+
+    left: 0;
+
+    background: #e63946;
+
+}
+
+
+.active-segment {
+
+    left: 0;
+
+    background: #f4a261;
+
+}
+
+
+.recovery-segment {
+
+    left: 0;
+
+    background: #457b9d;
+
+}
+/* =========================================
+   FRAME DATA EXPLANATION
+========================================= */
+
+.frame-explanation {
+
+    margin-top: 40px;
+
+    padding-top: 30px;
+
+    border-top: 2px solid #444;
+
+}
+
+
+.explanation-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-top: 20px;
+
+}
+
+
+.explanation-card {
+
+    padding: 20px;
+
+    border: 2px solid #555;
+
+    border-radius: 10px;
+
+}
+
+
+.explanation-card h3 {
+
+    margin-top: 0;
+
+}
+
+
+.explanation-card p {
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   EXPLANATION MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .explanation-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+/* =========================================
+   EXTERNAL RESOURCE CARDS
+========================================= */
+
+.resource-section {
+
+    margin-top: 30px;
+
+}
+
+
+.resource-card {
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    border: 2px solid #444;
+
+    background: #1a1a1a;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.resource-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 10px 25px rgba(
+            0,
+            0,
+            0,
+            0.35
+        );
+
+}
+
+
+.resource-card img {
+
+    width: 100%;
+
+    max-width: 180px;
+
+    display: block;
+
+    margin: 0 auto 15px;
+
+}
+
+
+.resource-card h3 {
+
+    margin-bottom: 10px;
+
+}
+
+
+.resource-card p {
+
+    line-height: 1.5;
+
+}
+.tutorial-video {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #444;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.tutorial-video-empty {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #444;
+    text-align: center;
+    opacity: 0.75;
+}
+/* =========================================
+   CHARACTER CARD
+========================================= */
+
+.character-card {
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #222,
+            #111
+        );
+
+    border: 2px solid #444;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+/* =========================================
+   CHARACTER CARD HOVER
+========================================= */
+
+.character-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color: #e10600;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.5);
+
+}
+
+.character-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 12px 30px rgba(
+            0,
+            0,
+            0,
+            0.4
+        );
+
+}
+
+/* =========================================
+   CHARACTER IMAGE CONTAINER
+========================================= */
+
+.character-image-container {
+
+    width: 100%;
+
+    height: 300px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            #3a3a3a 0%,
+            #1a1a1a 70%,
+            #0d0d0d 100%
+        );
+
+}
+
+/* =========================================
+   CHARACTER IMAGE OVERLAY
+========================================= */
+
+.character-image-container::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 80px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.8)
+        );
+
+    pointer-events: none;
+
+}
+/* =========================================
+   CHARACTER IMAGE
+========================================= */
+
+.character-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center bottom;
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+
+/* =========================================
+   CHARACTER IMAGE HOVER
+========================================= */
+
+.character-card:hover
+.character-image {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+/* =========================================
+   CHARACTER CARD CONTENT
+========================================= */
+
+.character-card-header,
+.character-card > h2,
+.character-card > p,
+.character-card > .character-details,
+.character-card > .tutorial-video,
+.character-card > .tutorial-video-empty,
+.character-card > .character-button {
+
+    margin-left: 20px;
+
+    margin-right: 20px;
+
+}
+
+
+.character-card > h2 {
+
+    margin-top: 20px;
+
+}
+/* =========================================
+   CHARACTER CARD RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    .character-image-container {
+
+        height: 240px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .character-image-container {
+
+        height: 260px;
+
+    }
+
+}
+/* =========================================
+   CHARACTER NAME
+========================================= */
+
+.character-card > h2 {
+
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+
+    font-size: 1.8rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+/* =========================================
+   CHARACTER ROLE
+========================================= */
+
+.character-role {
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    opacity: 0.8;
+
+}
+/* =========================================
+   CHARACTER CARD CONTENT
+========================================= */
+
+.character-card-header,
+.character-card > h2,
+.character-card > p,
+.character-card > .character-details,
+.character-card > .tutorial-video,
+.character-card > .tutorial-video-empty,
+.character-card > .character-button {
+
+    margin-left: 20px;
+
+    margin-right: 20px;
+
+}
+/* =========================================
+   CHARACTER CARD IMAGE AREA
+========================================= */
+
+.character-image-container {
+
+    width: 100%;
+
+    height: 300px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            #3a3a3a 0%,
+            #1a1a1a 70%,
+            #0d0d0d 100%
+        );
+
+}
+
+
+/* =========================================
+   CHARACTER IMAGE
+========================================= */
+
+.character-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center bottom;
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+
+/* =========================================
+   CHARACTER IMAGE HOVER
+========================================= */
+
+.character-card:hover .character-image {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+/* =========================================
+   CHARACTER IMAGE OVERLAY
+========================================= */
+
+.character-image-container::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 80px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.8)
+        );
+
+    pointer-events: none;
+
+}
+/* =========================================
+   CHARACTER CARD
+========================================= */
+
+.character-card {
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #222,
+            #111
+        );
+
+    border: 2px solid #444;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+/* =========================================
+   CHARACTER CARD HOVER
+========================================= */
+
+.character-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color: #e10600;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.5);
+
+}
+/* =========================================
+   CHARACTER NAME
+========================================= */
+
+.character-card > h2 {
+
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+
+    font-size: 1.8rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+/* =========================================
+   CHARACTER ROLE
+========================================= */
+
+.character-role {
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    opacity: 0.8;
+
+}
+/* =========================================
+   CHARACTER CARD CONTENT SPACING
+========================================= */
+
+.character-card-header,
+.character-card > h2,
+.character-card > p,
+.character-card > .character-details,
+.character-card > .tutorial-video,
+.character-card > .tutorial-video-empty,
+.character-card > .character-button {
+
+    margin-left: 20px;
+
+    margin-right: 20px;
+
+}
