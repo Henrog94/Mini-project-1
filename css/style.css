@@ -2057,3 +2057,95 @@ footer {
     margin-right: 20px;
 
 }
+
+/* =========================================
+   CHARACTER GRID - CONSISTENT CARD SIZES
+========================================= */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(260px, 300px)
+    );
+
+    gap: 24px;
+
+    justify-content: center;
+
+    align-items: start;
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* =========================================
+   CHARACTER CARDS - FIXED WIDTH
+========================================= */
+
+.character-card {
+    width: 100%;
+    max-width: 300px;
+
+    min-width: 0;
+
+    box-sizing: border-box;
+
+    justify-self: center;
+
+    overflow: hidden;
+}
+
+/* =========================================
+   CHARACTER IMAGE - CONSISTENT SIZE
+========================================= */
+
+.character-image-container {
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.character-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    transition: transform 0.4s ease;
+}
+
+/* Zoom the image only inside its own container */
+
+.character-card:hover .character-image {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   RESPONSIVE GRID
+========================================= */
+
+@media (max-width: 600px) {
+    .card-grid {
+        grid-template-columns: minmax(0, 300px);
+        gap: 20px;
+        padding: 12px;
+    }
+
+    .character-card {
+        max-width: 300px;
+    }
+}
